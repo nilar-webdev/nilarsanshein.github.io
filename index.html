@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Nilar San Shein - Front-End / Web Application Developer" />
+  <title>Nilar San Shein | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+  --accent: #536897;
+  --accent-dark: #3f5075;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --bg-light: #f8fafc;
+    }
+.bg-primary,
+#sideNav {
+  background: #536897 !important;
+}
+
+/* .text-primary,
+a {
+  color: #536897 !important;
+} */
+
+a:hover {
+  color: #3f5075 !important;
+}
+
+.social-icons .social-icon:hover {
+  background-color: #536897 !important;
+}
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-dark);
+      background: #fff;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #343a40;
+      line-height: 1;
+    }
+
+    h1 { font-size: clamp(3rem, 7vw, 6rem); }
+    h2 { font-size: clamp(2.4rem, 5vw, 3.5rem); }
+    h3 { font-size: 2rem; }
+
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-dark); }
+
+    .text-primary { color: var(--accent) !important; }
+    .bg-primary { background-color: var(--accent) !important; }
+
+    #sideNav {
+      background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+      width: 17rem;
+      min-height: 100vh;
+      box-shadow: 0 0 30px rgba(0,0,0,.14);
+    }
+
+    #sideNav .navbar-brand {
+      margin: auto auto 1rem;
+      padding: .5rem;
+    }
+
+    #sideNav img,
+#sideNav .profile-img,
+.profile-img {
+    width: 10rem;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+}
+/* Make left menu text clear white */
+#sideNav .navbar-nav .nav-item .nav-link,
+#sideNav .navbar-nav .nav-link {
+  color: #fff !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.18);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover,
+#sideNav .navbar-nav .nav-item .nav-link.active {
+  color: #fff !important;
+  opacity: 1 !important;
+ 
+}
+h1, h2, h3, h4, h5, h6,
+.subheading {
+  text-transform: none !important;
+  color: var(--accent) !important;
+}
+.text-primary,
+a {
+  color: var(--accent) !important;
+}
+
+a:hover {
+  color: var(--accent-dark) !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+    /* Make left menu text clear white */
+#sideNav .navbar-nav .nav-item .nav-link,
+#sideNav .navbar-nav .nav-link {
+  color: #fff !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.18);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover,
+#sideNav .navbar-nav .nav-item .nav-link.active {
+  color: #fff !important;
+  opacity: 1 !important;
+  text-decoration: underline;
+  text-underline-offset: .25rem;
+}
+    #sideNav .navbar-nav .nav-item .nav-link {
+      font-weight: 700;
+      letter-spacing: .05rem;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.72);
+    }
+
+    #sideNav .navbar-nav .nav-item .nav-link:hover,
+    #sideNav .navbar-nav .nav-item .nav-link.active {
+      color: #fff;
+    }
+
+    .resume-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 5rem 1.5rem;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .resume-section-content { width: 100%; }
+
+    .subheading {
+      font-family: "Saira Extra Condensed", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* .lead { color: #5f6973; } */
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.4rem;
+      height: 3.4rem;
+      margin-right: .75rem;
+      border-radius: 50%;
+      background: #b1d1f1;
+      color: #fff;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .social-icons a:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .dev-icons {
+      font-size: 2.7rem;
+      color: #6c757d;
+    }
+
+    .dev-icons i { margin-right: 1rem; margin-bottom: .75rem; }
+
+    .skill-badge {
+      display: inline-block;
+      padding: .5rem .75rem;
+      margin: .25rem .2rem;
+      border-radius: 999px;
+      background: #f0f2f4;
+      color: #495057;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    .project-card {
+      border: 1px solid #e7e9ec;
+      border-radius: 1rem;
+      padding: 1.25rem;
+      background: #fff;
+      height: 100%;
+      box-shadow: 0 12px 30px rgba(0,0,0,.045);
+    }
+
+    .project-card .tag {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      background: rgba(189,93,56,.12);
+      padding: .35rem .6rem;
+      border-radius: 999px;
+      margin-bottom: .75rem;
+    }
+
+    .timeline-date {
+      min-width: 11rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-align: right;
+      padding-left: 1rem;
+    }
+
+    .list-check li { margin-bottom: .45rem; }
+    .list-check i { color: var(--accent); margin-right: .5rem; }
+
+    .small-note {
+      color: #7a828a;
+      font-size: .92rem;
+    }
+
+    @media (min-width: 992px) {
+      body { padding-left: 17rem; }
+      #sideNav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+      #sideNav .navbar-collapse {
+        display: flex !important;
+        flex-grow: 0;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: auto;
+      }
+      #sideNav .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+      .resume-section { padding: 5rem 3rem; }
+    }
+
+    @media (max-width: 991.98px) {
+      #sideNav { width: 100%; min-height: auto; }
+      .profile-circle { width: 3rem; height: 3rem; border-width: .2rem; font-size: 1.3rem; }
+      .resume-section { min-height: auto; }
+      .timeline-date { text-align: left; padding-left: 0; margin-top: .25rem; }
+    }
+  </style>
+</head>
+<body id="page-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top" aria-label="Home">
+      <span class="d-block d-lg-none fw-bold">Nilar San Shein</span>
+      <span class="d-none d-lg-block">
+                    <img alt="" class="img-fluid profile-img" src="profile.jpg">
+                    
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container-fluid p-0">
+    <section class="resume-section" id="about">
+      <div class="resume-section-content">
+        <h1 class="mb-0 text-primary">Nilar San Shein</h1>
+        <div class="subheading mb-5">
+                        <a href="mailto:nilarsanshein@gmail.com" style="text-decoration: none;">
+                            nilarsanshein@gmail.com
+                        </a>
+                    </div>
+        <p class="lead mb-4">
+          2013年12月にFunward Myanmar Co.,Ltdへ入社し、Web開発者としてWebアプリケーションの開発・保守に従事しました。2019年1月にテクノプロ・エンジニアリング社へ入社後は、日本国内のプロジェクトに参画し、業務システムおよびハイブリッドアプリの開発・保守を担当しました。
+2021年10月からは株式会社アルス・ノヴァにてWebアプリケーション開発者として勤務し、Angular、Vue.js、TypeScriptを用いたフロントエンド開発を中心に、AWS環境での運用・リリース業務にも携わりました。
+約12年間にわたり、日本とミャンマーでWebシステム開発の経験を積み、設計・開発・テスト・運用まで幅広く対応してきました。使いやすく、保守しやすい業務システムを作ることを大切にしています。
+
+          </p>
+        <div class="social-icons mb-4">
+          <a href="https://github.com/nilar-webdev" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="www.linkedin.com/in/nilar-san-shein-8998a8414" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:nilarsanshein@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      
+      </div>
+    </section>
+
+    <section class="resume-section" id="experience">
+      <div class="resume-section-content">
+        <h2 class="mb-5 text-primary">Experience</h2>
+
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
+            <h3 class="mb-0">Webアプリケーション開発者</h3>
+            <div class="subheading mb-3">株式会社アルス・ノヴァ · 日本</div>
+            <ul class="list-unstyled list-check">
+              <li><i class="fa-solid fa-check"></i>大手不動産会社向けWebシステムおよびハイブリッドアプリの開発・保守を担当</li>
+              <li><i class="fa-solid fa-check"></i>BtoB管理画面、プレビュー機能、CSV出力、API連携、共通レイアウトを実装。</li>
+              <li><i class="fa-solid fa-check"></i>AWSとJenkinsを利用したリリース業務、監視、手順書整理、テスト環境対応を経験。</li>
+              <li><i class="fa-solid fa-check"></i>日本語で仕様確認、報告、相談を行いながらチーム開発を実施。</li>
+            </ul>
+          </div>
+          <div class="timeline-date">Oct 2021 – Jan 2026</div>
+        </div>
+
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
+            <h3 class="mb-0">Web開発者</h3>
+            <div class="subheading mb-3">テクノプロ・エンジニアリング社 · 日本</div>
+            <ul class="list-unstyled list-check">
+              <li><i class="fa-solid fa-check"></i>社内向けメール管理システム、半導体状況管理システムの画面開発を担当。</li>
+              <li><i class="fa-solid fa-check"></i>一覧・詳細画面、メッセージ表示、ユーザー権限別表示、CSV出力機能を実装。</li>
+              <li><i class="fa-solid fa-check"></i>詳細設計から実装、単体テスト、結合テストまで対応。</li>
+            </ul>
+          </div>
+          <div class="timeline-date">Jan 2019 – Sep 2021</div>
+        </div>
+
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+          <div class="flex-grow-1">
+            <h3 class="mb-0">Web開発者</h3>
+            <div class="subheading mb-3">Funward Myanmar Co., Ltd. · ミャンマー</div>
+            <ul class="list-unstyled list-check">
+              <li><i class="fa-solid fa-check"></i>企業ホームページ、ニュースサイト、製品紹介サイト、英語テスト関連サイト、Webチャットシステムを開発。</li>
+              <li><i class="fa-solid fa-check"></i>画面レイアウト実装、レスポンシブ対応、CMSページ作成、スライダー・画像エフェクトの実装を担当。</li>
+            </ul>
+          </div>
+          <div class="timeline-date">Dec 2013 – May 2018</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section" id="skills">
+      <div class="resume-section-content">
+        <h2 class="mb-5 text-primary">Skills</h2>
+        <div class="subheading mb-3">Programming Languages & Tools</div>
+        <div class="dev-icons mb-4">
+          <i class="fab fa-html5" title="HTML5"></i>
+          <i class="fab fa-css3-alt" title="CSS3"></i>
+          <i class="fab fa-js-square" title="JavaScript"></i>
+          <i class="fab fa-angular" title="Angular"></i>
+          <i class="fab fa-vuejs" title="Vue.js"></i>
+          <i class="fab fa-node-js" title="Node.js"></i>
+          <i class="fab fa-aws" title="AWS"></i>
+          <i class="fab fa-git-alt" title="Git"></i>
+          <i class="fab fa-python" title="Python"></i>
+        </div>
+
+        <div class="mb-4">
+          <span class="skill-badge">HTML/CSS</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">TypeScript</span>
+          <span class="skill-badge">Angular</span>
+          <span class="skill-badge">Vue.js / Vuex</span>
+          <span class="skill-badge">RxJS / NgRx</span>
+          <span class="skill-badge">SCSS / SASS</span>
+          <span class="skill-badge">jQuery</span>
+          <span class="skill-badge">Node.js / Express.js</span>
+          <span class="skill-badge">PHP</span>
+          <span class="skill-badge">Ruby</span>
+          <span class="skill-badge">MySQL</span>
+          <span class="skill-badge">MongoDB</span>
+          <span class="skill-badge">AWS</span>
+          <span class="skill-badge">Jenkins</span>
+          <span class="skill-badge">Git / Bitbucket</span>
+          <span class="skill-badge">Bash / PowerShell</span>
+        </div>
+
+        <div class="subheading mb-3">Language</div>
+        <ul class="list-unstyled list-check">
+          <li><i class="fa-solid fa-check"></i>Japanese</li>
+          <li><i class="fa-solid fa-check"></i>English</li>
+          <li><i class="fa-solid fa-check"></i>Myanmar</li>
+        </ul>
+      </div>
+    </section>
+
+<section class="resume-section" id="education">
+  <div class="resume-section-content">
+    <h2 class="mb-5 text-primary">Education</h2>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">ヤンゴンコンピューター大学</h3>
+        <div class="subheading mb-3">コンピューターサイエンス学部（B.C.Sc）</div>
+        <p>
+          ミャンマーのヤンゴンコンピューター大学でコンピューターサイエンスを学び、
+          プログラミング、データベース、Web開発の基礎知識を身につけました。
+        </p>
+      </div>
+      <div class="timeline-date">2008年12月 – 2011年10月</div>
+    </div>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">ヤンゴンコンピューター大学</h3>
+        <div class="subheading mb-3">コンピューターサイエンス学部（B.C.Sc Hons）</div>
+        <p>
+          コンピューターサイエンスの専門知識をさらに深め、ソフトウェア開発に関する学習を継続しました。
+          卒業後はミャンマーの日系企業でWeb開発者としてキャリアをスタートし、
+          その後、技術力向上とより幅広いプロジェクト経験を積むために来日しました。
+        </p>
+      </div>
+      <div class="timeline-date">2011年12月 – 2012年10月</div>
+    </div>
+  </div>
+</section>
+
+    <section class="resume-section" id="certifications">
+      <div class="resume-section-content">
+        <h2 class="mb-5 text-primary">Certifications</h2>
+        <ul class="fa-ul mb-0">
+          <li class="mb-3"><span class="fa-li"><i class="fa-solid fa-award text-warning"></i></span>JLPT N2 · April 2023</li>
+          <li class="mb-3"><span class="fa-li"><i class="fa-solid fa-award text-warning"></i></span>JLPT N3 · July 2018</li>
+          <li class="mb-3"><span class="fa-li"><i class="fa-solid fa-award text-warning"></i></span>JLPT N4 · July 2016</li>
+          <li class="mb-3"><span class="fa-li"><i class="fa-solid fa-award text-warning"></i></span>TOEIC Listening & Reading · 612 · March 2026</li>
+        </ul>
+      </div>
+    </section>
+<section class="resume-section" id="interests">
+  <div class="resume-section-content">
+    <h2 class="mb-5 text-primary">Hobbies & Interests</h2>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">Reading</h3>
+        <p>
+          技術書や自己成長につながる本を読むことが好きです。新しい知識を学び、仕事や日常生活に活かすことを大切にしています。
+        </p>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">Exercise & Yoga</h3>
+        <p>
+          健康維持のために、無理のない範囲で運動やヨガを続けています。体を動かすことで気分をリフレッシュし、集中力を保つようにしています。
+        </p>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">Hiking</h3>
+        <p>
+          本格的な登山ではなく、軽めのハイキングが好きです。自然の中を歩きながらリラックスし、新しい場所を見ることを楽しんでいます。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const navLinks = document.querySelectorAll('#sideNav .nav-link');
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const nav = document.querySelector('.navbar-collapse');
+        if (nav && nav.classList.contains('show')) {
+          new bootstrap.Collapse(nav).hide();
+        }
+      });
+    });
+
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.remove('active'));
+          const active = document.querySelector(`#sideNav .nav-link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
+</body>
+</html>
